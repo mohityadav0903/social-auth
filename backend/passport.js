@@ -2,13 +2,14 @@ const GoogleStrategy = require("passport-google-oauth20").Strategy;
  const GithubStrategy = require("passport-github2").Strategy;
 // const FacebookStrategy = require("passport-facebook").Strategy;
 const passport = require("passport");
-
+const dotenv = require("dotenv");
+dotenv.config();
 const GOOGLE_CLIENT_ID =
-  "94389307195-tu1khercf85j3lmi2rv9auechk70i7l4.apps.googleusercontent.com";
-const GOOGLE_CLIENT_SECRET = "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";
+process.env.GOOGLE_CLIENT_ID;
+const GOOGLE_CLIENT_SECRET = process.env.GOOGLE_CLIENT_SECRET;
 
- GITHUB_CLIENT_ID = "8f13f23a5510b831a122";
- GITHUB_CLIENT_SECRET = "aabe9d3a657928267432bc79d3c74885ddbff8a1";
+ GITHUB_CLIENT_ID = process.env.GITHUB_CLIENT_ID;
+ GITHUB_CLIENT_SECRET = process.env.GITHUB_CLIENT_SECRET;
 
 // FACEBOOK_APP_ID = "your id";
 // FACEBOOK_APP_SECRET = "your id";
